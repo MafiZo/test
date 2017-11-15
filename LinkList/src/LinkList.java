@@ -1,11 +1,12 @@
 
 public class LinkList {
 
-	public  Node First;
+	public Node First;
 	public Node Last;
 	public LinkList()
 	{
 		First=null;
+		Last=null;
 	}
 	public int lenght()
 	{
@@ -39,6 +40,7 @@ public class LinkList {
 		     current=current.next; 
 		
 		current.next= recent;
+		Last=recent;
 	}
 	public void trace()
 	{
@@ -76,6 +78,7 @@ public class LinkList {
 			if (val==First.value)
 			{
 				First=null;
+				Last=null;
 				return true;
 			}
 		else
@@ -96,6 +99,11 @@ public class LinkList {
 			if (current.value==val)
 			{
 				previous.next=current.next;
+				if(current.next==null)
+				{
+				        Last=current;	
+				}
+				//del current 
 				return true;
 			}
 				
