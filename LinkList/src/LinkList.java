@@ -2,6 +2,7 @@
 public class LinkList {
 
 	public  Node First;
+	public Node Last;
 	public LinkList()
 	{
 		First=null;
